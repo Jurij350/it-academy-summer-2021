@@ -9,7 +9,7 @@ s = 0  # Переменная для вычисления площади
 if (a + b) > c and (b + c) > a and (a + c) > b:
     print("\nThe data is entered correctly")
     p = (a + b + c) / 2
-    s = (p*(p-a)*(p-b)*(p-c))**0.5
+    s = (p * (p - a) * (p - b) * (p - c)) ** 0.5
     print("Square: " + str(s))
 else:
     print("Invalid data! ")
