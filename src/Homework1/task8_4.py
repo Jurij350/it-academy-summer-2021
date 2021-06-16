@@ -12,11 +12,11 @@
 #  15 собачьих лет за первый год
 # +9 собачьих лет за второй год
 # +5 собачьих лет за каждый последующий год.
-human_years = int(input(" Enter, please human years "))
+human_years = int(input(" Enter, please human years ")) # вводим данные
 cat_years = 0
 dog_years = 0
 result = []
-if human_years == 1:
+if human_years == 1: # путем ветвления выполняем алгоритм
     cat_years = 15
     dog_years = 15
     result.insert(0, dog_years)
