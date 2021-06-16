@@ -4,5 +4,5 @@
 def square_digits(num):
     out = ''
     for im in str(num):
-        out = out + str(int(im) ** 2) # в цикле каждую цифру возводим в квадрат и делаем конкатенацию
+        out = out + str(int(im) ** 2)  # в цикле каждую цифру возводим в квадрат и делаем конкатенацию
     return int(out)
