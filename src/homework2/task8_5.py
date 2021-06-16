@@ -9,4 +9,4 @@ if 0 < num < 1000000:
         more_number = more_number + 1
     while (less_number ** 0.5) % 1 != 0:
         less_number = less_number - 1
-    print(str(more_number) + '-' + str(less_number))
+    print(str(more_number) + '-' + str(less_number)) # Выводим результат
