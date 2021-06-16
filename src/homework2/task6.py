@@ -9,6 +9,6 @@ while index != 0:
     num_one = num_one * 10 + ostat_zn
     index = index // 10
 if num == num_one:  # Сравниваем два числа и делаем вывод
-    print("Palindrome")
+    print("Palindrome") # Число палиндром
 else:
     print("Not a Palindrome")
