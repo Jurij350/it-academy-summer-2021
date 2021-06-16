@@ -9,5 +9,4 @@ while i < n - 2:  # Через цикл While находим число в ря�
     fib1 = fib2
     fib2 = fib_sum
     i = i + 1
-
 print("Meaning: ", fib2)
