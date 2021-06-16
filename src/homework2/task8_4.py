@@ -36,6 +36,6 @@ elif human_years > 2:
     result.insert(0, dog_years)
     result.insert(0, cat_years)
     result.insert(0, human_years)
-    print(result)
+    print(result) # Выводим результат
 else:
     print(" Incorrect data! ")
