@@ -1,4 +1,5 @@
-# Посчитать количество строчных и прописных букв в веденной строке. Учитывать только английские буквы.
+# Посчитать количество строчных и прописных букв
+# в веденной строке. Учитывать только английские буквы.
 from string import ascii_letters as en
 
 new_str: str = str(input("Enter please string: "))  # Вводим строку для контроля
@@ -10,5 +11,5 @@ for i in result:  # Считаем английские буквы в нашем
         index_low = index_low + 1
     if i.isupper() and i in en:
         index_up = index_up + 1
-print("Lowercase: " + str(index_low))  # Выводим разультат
+print("Lowercase: " + str(index_low))
 print("Uppercase: " + str(index_up))
