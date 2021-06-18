@@ -1,5 +1,11 @@
 """ 1 line """
 import random
+import re
+import sys
+import glob
+import unittest
+import doctest
+
 print('\n1 line')
 print('Hello, world!')
 
@@ -39,7 +45,7 @@ greet('Bob')
 """6 lines"""
 
 print('\n6 lines')
-import re
+
 
 for test_string in ['555-1212',
                     'ILL-EGAL']:
@@ -65,7 +71,7 @@ print('I owe the grocer $%.2f' % grocery_bill)
 print('\n8 lines')
 """This lines adds up integers that have been passed 
 as arguments in the command line"""
-import sys
+
 
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
@@ -77,7 +83,7 @@ except ValueError:
 
 print('\n9 lines')
 """indent your Python code to put into an email"""
-import glob
+
 
 """glob supports Unix style pathname extensions"""
 python_files = glob.glob('*.py')
@@ -151,7 +157,7 @@ print(my_account.balance, my_account.overdrawn())
 """13 lines"""
 
 print('\n13 lines')
-import unittest
+
 
 
 def median(pool):
@@ -189,7 +195,6 @@ def median(pool):
 
 
 if __name__ == '__main__':
-    import doctest
 
     doctest.testmod()
 
@@ -365,8 +370,6 @@ print("\n".join(". " * q + "Q " + ". " * (BOARD_SIZE - q - 1) for q in queens))
 """33 lines"""
 
 print('\n33 lines')
-
-
 
 guesses_made = 0
 
