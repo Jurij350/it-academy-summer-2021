@@ -13,7 +13,7 @@
 #  15 собачьих лет за первый год
 # +9 собачьих лет за второй год
 #  +5 собачьих лет за каждый последующий год.
-human_years = int(input(" Enter, please human years ")) # вводим данные
+human_years = int(input(" Enter, please human years "))  # вводим данные
 cat_years = 0
 dog_years = 0
 result = []
