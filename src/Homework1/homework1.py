@@ -1,8 +1,8 @@
 """ 1 line """
 import csv
 import doctest
-import xml.etree.ElementTree as etree
 import glob
+import xml.etree.ElementTree as etree
 import random
 import re
 import sys
@@ -183,10 +183,15 @@ print('\n14 lines')
 
 
 def median(pool):
-    """Statistical median to demonstrate doctest.
+
+    """
+    Statistical median to demonstrate doctest.
+
         >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
-        6 #change to 7 in order to pass the test
-        """
+
+    6 #change to 7 in order to pass the test
+
+    """
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
