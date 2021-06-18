@@ -1,13 +1,14 @@
 """ 1 line """
+import csv
+import doctest
+import xml.etree.ElementTree as etree
+import glob
 import random
 import re
 import sys
-import glob
 import unittest
-import doctest
-import xml.etree.ElementTree as etree
+
 import itertools
-import csv
 from itertools import groupby
 from time import localtime
 
