@@ -77,7 +77,6 @@ print('\n8 lines')
 """This lines adds up integers that have been passed 
 as arguments in the command line"""
 
-
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
     print('sum =', total)
@@ -163,7 +162,6 @@ print(my_account.balance, my_account.overdrawn())
 print('\n13 lines')
 
 
-
 def median(pool):
     copy = sorted(pool)
     size = len(copy)
@@ -225,7 +223,6 @@ for has_chars, frags in groupby(lines, bool):
 print('\n16 lines')
 
 
-
 # need to define cmp function in Python 3
 def cmp(a, b):
     return (a > b) - (a < b)
@@ -284,7 +281,6 @@ for answer in solve(BOARD_SIZE):
 """20 lines"""
 
 print('\n20 lines')
-
 
 
 def iter_primes():
