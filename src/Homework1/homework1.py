@@ -1,5 +1,5 @@
 """ 1 line """
-
+import random
 print('\n1 line')
 print('Hello, world!')
 
@@ -63,7 +63,8 @@ print('I owe the grocer $%.2f' % grocery_bill)
 """8 lines"""
 
 print('\n8 lines')
-"""This lines adds up integers that have been passed as arguments in the command line"""
+"""This lines adds up integers that have been passed 
+as arguments in the command line"""
 import sys
 
 try:
@@ -115,7 +116,8 @@ else:
 """11 lines"""
 
 print('\n11 lines')
-REFRAIN = ''' %d bottles of beer on the wall, %d bottles of beer, take one down, pass it around,
+REFRAIN = ''' %d bottles of beer on the wall,
+%d bottles of beer, take one down, pass it around,
 %d bottles of beer on the wall! '''
 bottles_of_beer = 9
 while bottles_of_beer > 1:
@@ -364,7 +366,7 @@ print("\n".join(". " * q + "Q " + ". " * (BOARD_SIZE - q - 1) for q in queens))
 
 print('\n33 lines')
 
-import random
+
 
 guesses_made = 0
 
@@ -389,6 +391,7 @@ while guesses_made < 6:
         break
 
 if guess == number:
-    print('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
+    print('Good job, {0}! You guessed my number in {1} guesses!'
+          .format(name, guesses_made))
 else:
     print('Nope. The number I was thinking of was {0}'.format(number))
