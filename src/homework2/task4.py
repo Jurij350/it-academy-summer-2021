@@ -2,7 +2,8 @@
 # в веденной строке. Учитывать только английские буквы.
 from string import ascii_letters as en
 
-new_str: str = str(input("Enter please string: "))  # Вводим строку для контроля
+new_str: str = str(input("Enter please string: "))
+# Вводим строку для контроля
 index_low = 0  # индекс для подсчета строчных букв
 index_up = 0  # Индекс для подсчета прописных букв
 result = list(new_str)
