@@ -51,7 +51,6 @@ greet('Bob')
 
 print('\n6 lines')
 
-
 for test_string in ['555-1212',
                     'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
@@ -74,8 +73,8 @@ print('I owe the grocer $%.2f' % grocery_bill)
 """8 lines"""
 
 print('\n8 lines')
-"""This lines adds up integers that have been passed 
-as arguments in the command line"""
+# This lines adds up integers that have been passed
+# as arguments in the command line
 
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
@@ -87,7 +86,6 @@ except ValueError:
 
 print('\n9 lines')
 """indent your Python code to put into an email"""
-
 
 """glob supports Unix style pathname extensions"""
 python_files = glob.glob('*.py')
@@ -197,7 +195,6 @@ def median(pool):
 
 
 if __name__ == '__main__':
-
     doctest.testmod()
 
 """15 lines"""
