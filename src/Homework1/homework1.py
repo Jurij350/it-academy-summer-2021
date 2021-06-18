@@ -5,6 +5,11 @@ import sys
 import glob
 import unittest
 import doctest
+import xml.etree.ElementTree as etree
+import itertools
+import csv
+from itertools import groupby
+from time import localtime
 
 print('\n1 line')
 print('Hello, world!')
@@ -99,7 +104,6 @@ for file_name in sorted(python_files):
 """10 lines"""
 
 print('\n10 lines')
-from time import localtime
 
 activities = {8: 'Sleeping',
               9: 'Commuting',
@@ -201,7 +205,6 @@ if __name__ == '__main__':
 """15 lines"""
 
 print('\n15 lines')
-from itertools import groupby
 
 lines = '''
 This is the
@@ -221,7 +224,6 @@ for has_chars, frags in groupby(lines, bool):
 
 print('\n16 lines')
 
-import csv
 
 
 # need to define cmp function in Python 3
@@ -283,7 +285,6 @@ for answer in solve(BOARD_SIZE):
 
 print('\n20 lines')
 
-import itertools
 
 
 def iter_primes():
@@ -316,8 +317,7 @@ dinner_recipe = """<html><body><table>
 <tr><td>1</td><td>cup</td><td>tomatoes</td></tr>
 <tr><td>1</td><td>jar</td><td>pesto</td></tr>"""
 
-# From http://effbot.org/zone/element-index.htm
-import xml.etree.ElementTree as etree
+# From http://effbot.org/zone/element-index.html
 
 tree = etree.fromstring(dinner_recipe)
 
