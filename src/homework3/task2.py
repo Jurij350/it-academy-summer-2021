@@ -12,16 +12,16 @@
 # элемента не было.
 correct_list = ['a' + x for x in "bcd"] + \
                ['b' + x for x in "bcd"]
-print(correct_list)
+# Получили список используя генератор
 correct_list2 = correct_list[::2]
-print(correct_list2)
+# Сделали срез списка и записали в новый
 correct_list3 = [x + 'a' for x in '1234']
-print(correct_list3)
+# Получили список используя генератор списков
 print(correct_list3.pop(1))
 # Удаляем первый элемент и распечатываем его
-print(correct_list3)
 correct_list4 = correct_list3.copy()
 # копируем список и добавляем к нему элемент 2а на
 # прежнее место
 correct_list4.insert(1, '2a')
-print(correct_list4)
+
+

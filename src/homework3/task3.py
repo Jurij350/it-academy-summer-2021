@@ -11,18 +11,14 @@
 # Убедитесь что len() исходного кортежа возвращает 1.
 new_list = ['a', 'b', 'c']
 new_tuple = tuple(new_list)
-print(new_tuple)
 # Создали список и сделали из него кортеж
 new_tuple1 = ('a', 'b', 'c')
 new_list_1 = list(new_tuple1)
-print(new_list_1)
 # Создали кортеж и сделали из него список
 a, b, c = 'a', 2, 'python'
-print(a)
-print(b)
-print(c)
 # Сделал инициализацию переменных одной строкой
 new_tuple2 = (1,)
+# Создал одноэлементный кортеж
 for x in new_tuple2:
     a = x + 0
     b = x + 1
