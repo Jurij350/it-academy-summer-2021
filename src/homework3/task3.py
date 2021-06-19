@@ -23,6 +23,11 @@ print(b)
 print(c)
 # Сделал инициализацию переменных одной строкой
 new_tuple2 = (1,)
-print([x+0 for x in new_tuple2])
+for x in new_tuple2:
+    a = x + 0
+    b = x + 1
+    c = x + 2
+    print(str(a) + ',' + str(b) + ',' + str(c))
+# Выводим значения используя кортеж
 print(len(new_tuple2))
-
+# Печатаем длину кортежа
