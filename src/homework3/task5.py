@@ -14,4 +14,3 @@ for i in new_list:
 # второй список с первыми вхождениями
 print(new_list)
 print(result_list)
-

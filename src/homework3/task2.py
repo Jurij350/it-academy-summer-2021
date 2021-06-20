@@ -23,5 +23,3 @@ correct_list4 = correct_list3.copy()
 # копируем список и добавляем к нему элемент 2а на
 # прежнее место
 correct_list4.insert(1, '2a')
-
-
