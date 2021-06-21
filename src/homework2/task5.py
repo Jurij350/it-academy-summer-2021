@@ -2,13 +2,20 @@
 # только временные переменные, циклические операторы и условные операторы.
 # n-вводится
 n = int(input(" Enter please the number of the fibonacci series: "))
-# Ввобдим номер числа Фибоначчи
-fib1 = 1  # Значение первых двух членов ряда
-fib2 = 1
-i = 0  # Начальный индекс
-while i < n - 2:  # Через цикл While находим число в ряде
-    fib_sum = fib1 + fib2
-    fib1 = fib2
-    fib2 = fib_sum
-    i = i + 1
-print("Meaning: ", fib2)
+
+
+def Fib(n):
+    if n <= 1:
+        return 0
+    if n == 2:
+        return 1
+    n_1 = Fib(n - 1)
+    n_2 = Fib(n - 2)
+    n = n_1 + n_2
+    return n
+
+
+# данную задачу решил через рекурсивную функцию
+# которая вызывает сама себя
+
+print(Fib(n))
