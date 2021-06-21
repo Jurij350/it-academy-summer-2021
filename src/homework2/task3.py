@@ -1,11 +1,8 @@
 # Вводится строка. Требуется удалить из нее
 # повторяющиеся символы и все пробелы.
+from collections import OrderedDict
+
 new_string = str(input('Enter please new string: '))
-# Вводим строку для задачи
-result = ""  # Промежуточная строка для вывода результата
-for i in range(len(new_string)):  # сравниваем символы
-    # в строке записываем в результат
-    if i == new_string.find(new_string[i]):
-        if new_string[i] != ' ':
-            result = result + new_string[i]
-print(result)
+new_string = new_string.replace(' ', '')
+new_string = "".join(OrderedDict.fromkeys(new_string))
+print(new_string)
