@@ -8,6 +8,9 @@ import re
 new_string = 'mama warit sup. mama varit sup mama ma ma.'
 # Уберем точки в строке а затем
 # преобразуем строку в множество
+# п
+# Подразумевается что символ конца строки - это
+# точка.
 new_string = new_string.replace('.', '')
 new_set = set(re.split(' ', new_string))
 # Выводим результат
