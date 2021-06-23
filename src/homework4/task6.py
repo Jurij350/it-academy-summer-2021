@@ -5,9 +5,10 @@
 # различных слов содержится в этом тексте.
 import re
 
-new_string = 'mama warit sup. mama varit sup'
+new_string = 'mama warit sup. mama varit sup mama ma ma.'
 # Уберем точки в строке а затем
 # преобразуем строку в множество
 new_string = new_string.replace('.', '')
 new_set = set(re.split(' ', new_string))
+# Выводим результат
 print(len(new_set))
