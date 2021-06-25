@@ -20,9 +20,9 @@ print(result_languages)
 # используем множество, по скольку
 # данный тип данных выводит только
 # уникальные значения.
-result_languages_knowledge = set(schoolboys_1[1::])\
-                        & set(schoolboys_2[1::])\
-                        & set(schoolboys_3[1::])
+result_languages_knowledge = set(schoolboys_1[1::]) \
+                             & set(schoolboys_2[1::]) \
+                             & set(schoolboys_3[1::])
 # Разность трех множеств - это есть языки,
 # которые знает хотя бы один школьник
 # Выведем для начала количество этих языков
