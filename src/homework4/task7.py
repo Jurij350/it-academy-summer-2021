@@ -11,6 +11,6 @@ while a != 0 and b != 0:
         b = b % a
 # Через условие выводим результат
 if a == 0:
-    print('НОД '+str(b))
+    print('НОД ' + str(b))
 else:
     print('НОД ' + str(a))
