@@ -15,7 +15,6 @@ print(schoolboys)
 result_languages = set(schoolboys_1[1::]
                        + schoolboys_2[1::]
                        + schoolboys_3[1::])
-
 print(result_languages)
 # Выводим список всех языков. Для этого
 # используем множество, по скольку

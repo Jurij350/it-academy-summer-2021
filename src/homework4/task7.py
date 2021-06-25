@@ -14,5 +14,3 @@ if a == 0:
     print('НОД '+str(b))
 else:
     print('НОД ' + str(a))
-
-
