@@ -23,5 +23,3 @@ for i in range(len(input_list3)):
     for k, v in new_dict.items():
         if (isinstance(v, list) and input_list3[i] in v) or input_list3[i] == v:
             print(k)
-
-
