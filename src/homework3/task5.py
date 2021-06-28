@@ -11,7 +11,5 @@ result_list = []
 for i in new_list:
     if new_list.count(i) == 1:
         result_list.append(i)
-# Выводим для сравнения первый список и
-# второй список с первыми вхождениями
-print(new_list)
+# Выводим второй список с  элементами
 print(result_list)
