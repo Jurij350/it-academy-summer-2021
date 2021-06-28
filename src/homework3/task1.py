@@ -3,13 +3,16 @@
 #  Fizz, вместо чисел кратный 5 пишет Buzz,
 #  а вместо чисел одновременно кратных и
 #  3 и 5 - FizzBuzz
-new_list = list(range(1, 101))
-for i in new_list:
-    if i % 3 == 0 and i % 5 != 0:
-        print("Fizz")
-    elif i % 3 != 0 and i % 5 == 0:
-        print("Buzz")
-    elif i % 3 == 0 and i % 5 == 0:
+for i in (range(1, 101)):
+    # Проверяем кратность 3 и 5
+    if i % 3 == 0 and i % 5 == 0:
         print("FizzBuzz")
+    # Проверяем кратность только 3
+    elif i % 3 == 0:
+        print("Fizz")
+    # Проверяем кратность только 5
+    elif i % 5 == 0:
+        print("Buzz")
+    # Иначе печатаем только число
     else:
         print(i)
