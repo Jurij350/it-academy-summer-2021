@@ -10,15 +10,15 @@
 # 5.Скопируйте список и добавьте в него элемент
 # '2a' так чтобы в исходном списке этого
 # элемента не было.
-correct_list = ['a' + x for x in "bcd"] + \
-               ['b' + x for x in "bcd"]
+
 # Получили список используя генератор
-correct_list2 = correct_list[::2]
+correct_list = [a + b for a in "ab" for b in "bcd"]
 # Сделали срез списка и записали в новый
-correct_list3 = [x + 'a' for x in '1234']
+correct_list2 = correct_list[::2]
 # Получили список используя генератор списков
-print(correct_list3.pop(1))
+correct_list3 = [x + 'a' for x in '1234']
 # Удаляем первый элемент и распечатываем его
+print(correct_list3.pop(1))
 correct_list4 = correct_list3.copy()
 # копируем список и добавляем к нему элемент 2а на
 # прежнее место
