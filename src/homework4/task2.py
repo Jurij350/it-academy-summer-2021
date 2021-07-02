@@ -35,8 +35,8 @@ countries_dict = {}
 # городов как ключ а название страны - значение
 for i in range(0, index_countries):
     countries = \
-        input('Введите название ' + str(i + 1) +
-              '-й страны и городoв: ') \
+        input('Введите название {0}-й страны и городoв: '
+              .format(str(i + 1))) \
             .split()
     countries_dict |= dict.fromkeys(countries[1:],
                                     countries[0])
