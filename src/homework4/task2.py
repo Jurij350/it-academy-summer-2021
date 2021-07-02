@@ -1,27 +1,52 @@
 # Дан список стран и городов каждой страны.
 # Затем даны названия городов. Для каждого
-# города укажите, в какой стране он
-# находится.
+# города укажите, в какой стране он находится.
+# Входные данные
+# Программа получает на вход количество
+# стран N. Далее идет N строк, каждая строка
+# начинается с названия страны, затем идут
+# названия городов этой страны. В следующей
+# строке записано число M, далее идут M запросов —
+# названия каких-то M городов, перечисленных
+# выше.
+# Выходные данные
+# Для каждого из запроса выведите название
+# страны, в котором находится данный город.
+# Примеры
+# Входные данные
+# 2
+# Russia Moscow Petersburg Novgorod Kaluga
+# Ukraine Kiev Donetsk Odessa
+# 3
+# Odessa
+# Moscow
+# Novgorod
+# Выходные данные
+# Ukraine
+# Russia
+# Russia
 
-# Список стран и городов
-input_string1 = 'Russia Moscow Peterburg Novgorod Kaluga'
-input_string2 = 'Ukraine Kiew Donetsk Odessa'
-# Названия городов
-input_string3 = 'Odessa Moscow Novgorod'
-# Преобразовываем строки в списки слов
-input_list1 = input_string1.split(' ')
-input_list2 = input_string2.split(' ')
-input_list3 = input_string3.split(' ')
-# Создаем словарь где ключем является название
-# страны а значием является список городов
-new_dict = {input_list1[0]: (input_list1[1::]),
-            input_list2[0]: (input_list2[1::])}
-# В данном вдойном цикле мы сравниваем элементы
-# третьего цикла с городами для проверки
-# и города в нашем словаре
-# и при совпадении значения выводим значение ключа
-for i in range(len(input_list3)):
-    for k, v in new_dict.items():
-        if (isinstance(v, list) and input_list3[i] in v) \
-                or input_list3[i] == v:
-            print(k)
+# Вводим количество стран
+index_countries = int(input('Введите '
+                            'количество стран '))
+# Пустой словарь для записи значений
+countries_dict = {}
+# В цикле записываем в ключе названия
+# городов как ключ а название страны - значение
+for i in range(0, index_countries):
+    countries = \
+        input('Введите название ' + str(i + 1) +
+              '-й страны и городoв: ') \
+            .split()
+    countries_dict |= dict.fromkeys(countries[1:],
+                                    countries[0])
+
+# Записываем города в список
+list_cities = input('Введите через пробел '
+                    'названия городов: ').split()
+
+# Через двойной цикл выводим список стран
+for i in range(len(list_cities)):
+    for k, v in countries_dict.items():
+        if list_cities[i] == k:
+            print(v)
