@@ -9,15 +9,15 @@ schoolboys_1 = [1, 'Russian', 'English']
 schoolboys_2 = [2, 'Russian', 'Belarusian', 'English']
 schoolboys_3 = [3, 'Russian', 'Italian', 'French']
 
-# Выводим количество школьников
-print(schoolboys)
 # Выводим список всех языков. Для этого
 # используем множество, по скольку
 # данный тип данных выводит только
 # уникальные значения.
 result_languages = set(
     schoolboys_1[1::] + schoolboys_2[1::] + schoolboys_3[1::])
-print(result_languages)
+print('Количество языков которые знают все школьники: {}'
+      .format(len(result_languages)))
+print('Список всех языков: {}'.format(result_languages))
 # Разность трех множеств - это есть языки,
 # которые знает хотя бы один школьник
 result_languages_knowledge = set(
@@ -26,7 +26,10 @@ result_languages_knowledge = set(
     schoolboys_3[1::])
 
 # Выведем для начала количество этих языков
-print(len(result_languages_knowledge))
+print('Количество языков которые знает хотя '
+      'бы один школьник: {}'
+      .format(len(result_languages_knowledge)))
 # А затем выведем языки которые
 # знает хотя бы один школьник
-print(result_languages_knowledge)
+print('Список данных языков: {}'
+      .format(result_languages_knowledge))
