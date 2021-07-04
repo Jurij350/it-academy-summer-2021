@@ -27,25 +27,26 @@
 # Russia
 
 # Вводим количество стран
-index_countries = int(input('Введите '
-                            'количество стран '))
+number_countries = int(input('Введите '
+                             'количество стран '))
 # Пустой словарь для записи значений
-countries_dict = {}
+countries_and_cities_dict = {}
 # В цикле записываем в ключе названия
 # городов как ключ а название страны - значение
-for i in range(0, index_countries):
-    countries = \
-        input('Введите название {0}-й страны и городoв: '
-              .format(str(i + 1))).split()
-    countries_dict |= dict.fromkeys(countries[1:],
-                                    countries[0])
+for index in range(0, number_countries):
+    countries_for_checks = \
+        input('Введите название {}-й страны и городoв: '
+              .format(str(index + 1))).split()
+    countries_and_cities_dict |= dict.fromkeys(
+        countries_for_checks[1:],
+        countries_for_checks[0])
 
 # Записываем города в список
-list_cities = input('Введите через пробел '
-                    'названия городов: ').split()
+check_cities_list = input('Введите через пробел '
+                          'названия городов: ').split()
 
 # Через двойной цикл выводим список стран
-for i in range(len(list_cities)):
-    for k, v in countries_dict.items():
-        if list_cities[i] == k:
-            print(v)
+for index in range(len(check_cities_list)):
+    for keys, values in countries_and_cities_dict.items():
+        if check_cities_list[index] == keys:
+            print(values)
