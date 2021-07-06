@@ -6,18 +6,15 @@
 
 # Сам декоратор который хранит записывает
 # данные в наш список
-result_list = []
-
 
 def my_first_dec(func):
+    global result_list
+    result_list = []
     def wrapper(*args, **kwargs):
-        global result_list
-
         result = func(*args, **kwargs)
         result_list.append(result)
         print(result_list)
         return result
-
     return wrapper
 
 
