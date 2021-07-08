@@ -11,16 +11,27 @@
 
 
 try:
-    file_hw = open('ratings.txt')
+    # создаем файлы с атрибутом - для записи
+    top_250_movies_txt = open('top250_movies.txt', 'w')
+    levels_txt = open('levels.txt', 'w')
+    years_txt = open('years.txt', 'w')
+    # В цикле записываем соответствующую часть строки
+    # в отдельные файлы согласно заданию программы
+    with open('ratings.txt') as rating_txt:
+        for i, line in enumerate(rating_txt):
+            if 28 <= i <= 278:
+                years_txt.write(line.split(' ')[-1])
+                levels_txt.write((line[27:32]).strip() + '\n')
+                top_250_movies_txt.write((line[32:-7]).strip() + '\n')
 except IOError as e:
     print(u'Необходимо убедиться '
           u'существует ли файл в '
           u'корневом каталоге ')
-else:
-    with file_hw as rating_txt :
-        lines = rating_txt.readline()
 
-    print(len(lines))
 
 finally:
+    # В данном блоке закрываем все файлы
     rating_txt.close()
+    levels_txt.close()
+    years_txt.close()
+    top_250_movies_txt.close()
