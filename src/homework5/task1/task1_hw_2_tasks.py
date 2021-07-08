@@ -1,13 +1,3 @@
-# Оформите решение задач из прошлых домашних работ
-# в функции. Напишите функцию runner.
-# (все станет проще когда мы изучим модули,
-# getattr и setattr)
-# runner() – все фукнции вызываются по очереди
-# runner(‘func_name’) – вызывается только
-# функцию func_name.
-# runner(‘func’, ‘func1’...) - вызывает
-# все переданные функции
-
 def count_price(price_rub, price_cop, count):
     price_in_kopeck = price_rub * 100 + price_cop
     price_finish = price_in_kopeck * count
