@@ -43,7 +43,8 @@ try:
     # Через Counter записываем гистограмму рейтингов в файл
     for number, count in Counter(result_levels).items():
         if count > 1:
-            levels_txt.write(f"Рейтинг {number} составляет {count} фильм(ов)\n")
+            levels_txt.write(f"Рейтинг {number} "
+                             f"составляет {count} фильм(ов)\n")
 
 
 except IOError:
