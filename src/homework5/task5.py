@@ -15,10 +15,10 @@ while number > index:
 # ближе к введенному числу
 # путем разности между результатом
 # и введенным числом
-if index - number > number - index/2:
+if index - number > number - index / 2:
     print(('Ближайшая степень двойки '
            'к введенному числу равна: {}')
-          .format(int(index/2)))
+          .format(int(index / 2)))
 else:
     print(('Ближайшая степень двойки '
            'к введенному числу равна: {}')

@@ -49,10 +49,12 @@ def runner():
 
 # Функция которая вызывает
 # одну функцию
+
+
 t_3.runner(t_3.number_pair())
 time.sleep(3)
 # Функция которая вызывает три переданные функии
-t_2.runner(t_3.transformation_num(),t_3.count_elements(),t_3.fizzbuzz())
+t_2.runner(t_3.transformation_num(), t_3.count_elements(), t_3.fizzbuzz())
 # Функция которая вызывает все функции по очереди
 time.sleep(3)
 runner()
