@@ -88,3 +88,5 @@ def largest_divisor(a,b):
         print('НОД ' + str(b))
     else:
         print('НОД ' + str(a))
+
+

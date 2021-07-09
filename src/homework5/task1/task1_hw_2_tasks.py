@@ -138,3 +138,9 @@ def found_number(num):
         while (less_number ** 0.5) % 1 != 0:
             less_number = less_number - 1
     print('{}-{}'.format(str(more_number), str(less_number)))
+
+
+def runner(func_1, func_2, func_3):
+    func_1
+    func_2
+    func_3

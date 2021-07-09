@@ -60,3 +60,7 @@ def transformation_num():
         if new_list[i] == 0:
             new_list.append(new_list.pop(i))
     print(new_list)
+
+
+def runner(func):
+    func

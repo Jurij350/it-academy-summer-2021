@@ -14,10 +14,7 @@
 import task1_hw_2_tasks as t_2
 import task1_hw_3_tasks as t_3
 import task1_hw_4_tasks as t_4
-
-def runner(func):
-   return func
-
+import time
 
 
 def runner():
@@ -50,11 +47,12 @@ def runner():
     t_4.different_words()
     t_4.largest_divisor(112, 2357)
 
-
-
-
-
-
-
-
-runner(t_3.number_pair())
+# Функция которая вызывает
+# одну функцию
+t_3.runner(t_3.number_pair())
+time.sleep(3)
+# Функция которая вызывает три переданные функии
+t_2.runner(t_3.transformation_num(),t_3.count_elements(),t_3.fizzbuzz())
+# Функция которая вызывает все функции по очереди
+time.sleep(3)
+runner()
