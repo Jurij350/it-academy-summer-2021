@@ -9,7 +9,7 @@
 # ratings.txt – гистограмма рейтингов,
 # years.txt – гистограмма годов.
 
-
+from collections import Counter
 try:
     # создаем файлы с атрибутом - для записи
     top_250_movies_txt = open('top250_movies.txt', 'w')
@@ -17,16 +17,35 @@ try:
     years_txt = open('years.txt', 'w')
     # В цикле записываем соответствующую часть строки
     # в отдельные файлы согласно заданию программы
+    # Данные два списка необходимы для
+    # промежуточных значений
+    result_years = []
+    result_levels = []
     with open('ratings.txt') as rating_txt:
         for i, line in enumerate(rating_txt):
             if 28 <= i <= 278:
                 # Преобразовываем строку в массив
-                # символов и записываем последний символ
-                years_txt.write(line.split(' ')[-1])
-                # Берем срез строки и удаляем из него пробелы
-                levels_txt.write((line[27:32]).strip() + '\n')
-                #
+                # символов и записываем последний
+                # символ в список
+                result_years.append(((line.split(' ')[-1])[1:5]))
+                # Берем срез строки и удаляем из него
+                # пробелы и записываем это все в список
+                result_levels.append((line[27:32]).strip())
+                # записываем в файл список всех названий фильмов
                 top_250_movies_txt.write((line[32:-7]).strip() + '\n')
+
+    # Через Counter записываем гистограмму готов в файл
+    result_years.sort(reverse=True)
+    for number, count in Counter(result_years).items():
+        if count > 1:
+            years_txt.write(f"Год выхода {number} вышло {count} фильмов\n")
+
+    # Через Counter записываем гистограмму рейтингов в файл
+    for number, count in Counter(result_levels).items():
+        if count > 1:
+            levels_txt.write(f"Рейтинг {number} составляет {count} фильм(ов)\n")
+
+
 except IOError as e:
     print(u'Необходимо убедиться '
           u'существует ли файл в '
@@ -39,3 +58,4 @@ finally:
     levels_txt.close()
     years_txt.close()
     top_250_movies_txt.close()
+
