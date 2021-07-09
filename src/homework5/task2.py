@@ -2,19 +2,20 @@
 # вызовов функции (за все время вызовов, не только
 # текущий запуск программы)
 
-# Это переменная для звписи вызовов функции
-
-# Сам декоратор который хранит записывает
-# данные в наш список
-
 def my_first_dec(func):
+    # Это переменная для записи вызовов функции
     global result_list
     result_list = []
+
+    # Сам декоратор который хранит записывает
+    # данные в наш список
+
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
         result_list.append(result)
         print(result_list)
         return result
+
     return wrapper
 
 
