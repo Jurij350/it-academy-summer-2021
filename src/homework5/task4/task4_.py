@@ -46,7 +46,7 @@ try:
             levels_txt.write(f"Рейтинг {number} составляет {count} фильм(ов)\n")
 
 
-except IOError as e:
+except IOError:
     print(u'Необходимо убедиться '
           u'существует ли файл в '
           u'корневом каталоге ')
@@ -58,4 +58,7 @@ finally:
     levels_txt.close()
     years_txt.close()
     top_250_movies_txt.close()
+
+
+
 
