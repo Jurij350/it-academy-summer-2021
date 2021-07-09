@@ -14,6 +14,7 @@ def fizzbuzz():
 def list_pract():
     correct_list = [a + b for a in "ab" for b in "bcd"]
     correct_list2 = correct_list[::2]
+    print(correct_list2)
     correct_list3 = [x + 'a' for x in '1234']
     print(correct_list3.pop(1))
     correct_list4 = correct_list3.copy()
@@ -23,9 +24,12 @@ def list_pract():
 def tuple_pract():
     new_list = ['a', 'b', 'c']
     new_tuple = tuple(new_list)
+    print(new_tuple)
     new_tuple1 = ('a', 'b', 'c')
     new_list_1 = list(new_tuple1)
+    print(new_list_1)
     a, b, c = 'a', 2, 'python'
+    print(a, b, c)
     new_tuple2 = ([1, 2, 3],)
     for x in new_tuple2:
         for new_list in x:
