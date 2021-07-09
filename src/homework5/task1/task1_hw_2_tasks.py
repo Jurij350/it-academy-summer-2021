@@ -34,19 +34,23 @@ def count_symbols(new_str):
     print("Uppercase: {}".format(index_up))
 
 
-def Fib(n):
-    if n <= 1:
-        return 0
-    if n == 2:
-        return 1
-    n_1 = Fib(n - 1)
-    n_2 = Fib(n - 2)
-    n = n_1 + n_2
+def count_fib(n):
+    def Fib(n):
+        if n <= 1:
+            return 0
+        if n == 2:
+            return 1
+        n_1 = Fib(n - 1)
+        n_2 = Fib(n - 2)
+        n = n_1 + n_2
+        return n
+
     print(n)
 
 
 def palindrome(num):
     num_one = 0
+    index = num
     while index != 0:
         ostat_zn = index % 10
         num_one = num_one * 10 + ostat_zn
