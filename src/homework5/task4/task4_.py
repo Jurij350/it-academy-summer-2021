@@ -58,7 +58,3 @@ finally:
     levels_txt.close()
     years_txt.close()
     top_250_movies_txt.close()
-
-
-
-
