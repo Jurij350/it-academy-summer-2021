@@ -43,7 +43,6 @@ def counting_numbers_second():
 
 
 def scoolboys_knowledge_languages():
-    schoolboys = 3
     schoolboys_1 = [1, 'Russian', 'English']
     schoolboys_2 = [2, 'Russian', 'Belarusian', 'English']
     schoolboys_3 = [3, 'Russian', 'Italian', 'French']
@@ -78,7 +77,7 @@ def different_words():
           .format(len(result_set)))
 
 
-def largest_divisor(a,b):
+def largest_divisor(a, b):
     while a != 0 and b != 0:
         if a >= b:
             a = a % b
@@ -88,5 +87,3 @@ def largest_divisor(a,b):
         print('НОД ' + str(b))
     else:
         print('НОД ' + str(a))
-
-
