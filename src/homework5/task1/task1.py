@@ -19,13 +19,16 @@ import task1_hw_4_tasks as t_4
 
 
 def runner(func, some_function, list_all_function):
-    if func is not None and some_function is None and list_all_function is None:
+    if func is not None and some_function is None and\
+            list_all_function is None:
         print("Функция runner вызывает одну функцию:")
         func
-    elif func is None and list_all_function is None and some_function is not None:
+    elif func is None and list_all_function is None and\
+            some_function is not None:
         for elem in some_function:
             elem
-    elif func is None and some_function is None and list_all_function is not None:
+    elif func is None and some_function is None and \
+            list_all_function is not None:
         for elem in list_all_function:
             elem
 
