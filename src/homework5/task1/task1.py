@@ -17,13 +17,13 @@ import task1_hw_2_tasks as t_2
 
 
 def runner(func, my_list, my_list_all):
-    if func != None and my_list == None and my_list_all == None:
+    if func is not None and my_list is None and my_list_all is None:
         print("Функция runner вызывает одну функцию:")
         func
-    elif func == None and my_list_all == None and my_list != None:
+    elif func is None and my_list_all is None and my_list is not None:
         for elem in my_list:
             elem
-    elif func == None and my_list == None and my_list_all != None:
+    elif func is None and my_list is None and my_list_all is not None:
         for elem in my_list_all:
             elem
 

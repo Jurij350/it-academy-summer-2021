@@ -1,5 +1,4 @@
 import re
-
 import task1_hw_3_tasks as t_3
 
 """Функция считает общую цену товара """
