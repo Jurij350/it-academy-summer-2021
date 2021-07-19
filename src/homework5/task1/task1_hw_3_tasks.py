@@ -1,3 +1,4 @@
+"""Функция печатает строку символов согласно условия"""
 def fizzbuzz():
     for i in (range(1, 101)):
         if i % 3 == 0 and i % 5 == 0:
@@ -11,6 +12,7 @@ def fizzbuzz():
             print(i)
 
 
+"""Функция создает список"""
 def list_pract():
     correct_list = [a + b for a in "ab" for b in "bcd"]
     correct_list2 = correct_list[::2]
@@ -21,6 +23,7 @@ def list_pract():
     correct_list4.insert(1, '2a')
 
 
+"""Функция создает кортеж"""
 def tuple_pract():
     new_list = ['a', 'b', 'c']
     new_tuple = tuple(new_list)
@@ -37,6 +40,7 @@ def tuple_pract():
     print('Длина кортежа: ' + str(len(new_tuple2)))
 
 
+"""Функция считает пары чисел"""
 def number_pair():
     in_str = '1 1 1 1'
     in_list = list(in_str)
@@ -49,6 +53,7 @@ def number_pair():
     print(index)
 
 
+"""Функция убирает повторяющиеся элементы"""
 def count_elements():
     new_list = [2, 4, 5, 3, 3, 5, 6, 7, 5, 4]
     result_list = []
@@ -58,6 +63,7 @@ def count_elements():
     print(result_list)
 
 
+"""Функция преобразовывает список"""
 def transformation_num():
     new_list = [1, 3, 6, 0, 0, 4, 5, 6, 3, 0, 0, 0, 6]
     for i in reversed(range(len(new_list))):
