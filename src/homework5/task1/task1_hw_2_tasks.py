@@ -177,5 +177,4 @@ def found_number(num):
     print('{}-{}'.format(str(more_number), str(less_number)))
 
 
-
-some_function = [found_number(45),cat_dog_years(13)]
+some_function = [found_number(45), cat_dog_years(13)]
