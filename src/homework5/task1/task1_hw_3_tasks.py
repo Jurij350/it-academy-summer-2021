@@ -82,3 +82,7 @@ def transformation_num():
         if new_list[i] == 0:
             new_list.append(new_list.pop(i))
     print(new_list)
+
+
+list_all_func = [transformation_num(), count_elements(), number_pair(),
+                 tuple_pract(), list_pract(), fizzbuzz()]

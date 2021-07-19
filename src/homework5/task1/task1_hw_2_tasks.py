@@ -1,5 +1,4 @@
 import re
-import task1_hw_3_tasks as t_3
 
 """Функция считает общую цену товара """
 
@@ -178,7 +177,5 @@ def found_number(num):
     print('{}-{}'.format(str(more_number), str(less_number)))
 
 
-list_double = [found_number(50), cat_dog_years(10)]
 
-my_list_all = [count_price(1, 1, 1), cat_dog_years(22),
-               t_3.fizzbuzz(), square_digits(34), found_number(56)]
+some_function = [found_number(45),cat_dog_years(13)]

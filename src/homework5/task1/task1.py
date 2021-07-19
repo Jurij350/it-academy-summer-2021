@@ -14,28 +14,22 @@
 
 
 import task1_hw_2_tasks as t_2
+import task1_hw_3_tasks as t_3
+import task1_hw_4_tasks as t_4
 
 
-def runner(func, my_list, my_list_all):
-    if func is not None and my_list is None and my_list_all is None:
+def runner(func, some_function, list_all_function):
+    if func is not None and some_function is None and list_all_function is None:
         print("Функция runner вызывает одну функцию:")
         func
-    elif func is None and my_list_all is None and my_list is not None:
-        for elem in my_list:
+    elif func is None and list_all_function is None and some_function is not None:
+        for elem in some_function:
             elem
-    elif func is None and my_list is None and my_list_all is not None:
-        for elem in my_list_all:
+    elif func is None and some_function is None and list_all_function is not None:
+        for elem in list_all_function:
             elem
 
 
-"""Функция вызывает одну функцию"""
-
-runner(t_2.count_fib(25), None, None)
-
-"""Функция вызывает несколько функций"""
-
-runner(None, t_2.list_double, None)
-
-"""Функция вызывает все функции"""
-
-runner(None, None, t_2.my_list_all)
+runner(t_4.largest_divisor(4, 6), None, None)
+runner(None, t_2.some_function, None)
+runner(None, None, t_3.list_all_func)
