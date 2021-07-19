@@ -2,6 +2,8 @@ import re
 
 
 """Функция считает общую цену товара """
+
+
 def count_price(price_rub, price_cop, count):
     price_in_kopeck = price_rub * 100 + price_cop
     price_finish = price_in_kopeck * count
@@ -11,6 +13,8 @@ def count_price(price_rub, price_cop, count):
 
 
 """Функция находит самое длинное слово"""
+
+
 def long_word(new_string):
     correct_string = re.sub(r'[^\w\s]', ' ',
                             new_string)
