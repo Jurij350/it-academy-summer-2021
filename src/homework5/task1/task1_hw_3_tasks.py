@@ -1,4 +1,5 @@
 """Функция печатает строку символов согласно условия"""
+import task1_hw_4_tasks as t_4
 
 
 def fizzbuzz():
@@ -85,4 +86,5 @@ def transformation_num():
 
 
 list_all_func = [transformation_num(), count_elements(), number_pair(),
-                 tuple_pract(), list_pract(), fizzbuzz()]
+                 tuple_pract(), list_pract(), fizzbuzz(), t_4.tuple_gen(),
+                 t_4.counting_numbers_first(), t_4.counting_numbers_second()]
