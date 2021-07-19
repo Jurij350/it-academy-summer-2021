@@ -1,3 +1,9 @@
+""" Списки для сигнатуры функции schoolboys_knowledge_languages"""
+schoolboys_1 = [1, 'Russian', 'English']
+schoolboys_2 = [2, 'Russian', 'Belarusian', 'English']
+schoolboys_3 = [3, 'Russian', 'Italian', 'French']
+
+
 def tuple_gen():
     dictionary_new = \
         {el: el ** 3
@@ -42,10 +48,8 @@ def counting_numbers_second():
     print(len(new_set1))
 
 
-def scoolboys_knowledge_languages():
-    schoolboys_1 = [1, 'Russian', 'English']
-    schoolboys_2 = [2, 'Russian', 'Belarusian', 'English']
-    schoolboys_3 = [3, 'Russian', 'Italian', 'French']
+def scoolboys_knowledge_languages(schoolboys_1, schoolboys_2, schoolboys_3):
+
     result_languages = set(
         schoolboys_1[1::] + schoolboys_2[1::] + schoolboys_3[1::])
     print('Количество языков которые знают все школьники: {}'
