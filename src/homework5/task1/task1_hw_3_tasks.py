@@ -83,6 +83,3 @@ def transformation_num():
             new_list.append(new_list.pop(i))
     print(new_list)
 
-
-def runner(func):
-    func
