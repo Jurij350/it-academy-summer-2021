@@ -5,6 +5,8 @@ schoolboys_3 = [3, 'Russian', 'Italian', 'French']
 
 
 """Функция создает список"""
+
+
 def tuple_gen():
     dictionary_new = \
         {el: el ** 3
@@ -13,6 +15,8 @@ def tuple_gen():
 
 
 """Функция сортирует список городов по странам"""
+
+
 def countries_sities(number_countries):
     countries_and_cities_dict = {}
     for index in range(0, number_countries):
@@ -32,6 +36,8 @@ def countries_sities(number_countries):
 
 
 """Функция создает множество"""
+
+
 def counting_numbers_first():
     from random import randint
     new_different_1 = [randint(0, 36) for i in range(27)]
@@ -42,6 +48,8 @@ def counting_numbers_first():
 
 
 """Функция преобразовывает множества"""
+
+
 def counting_numbers_second():
     from random import randint
     new_different_1 = [randint(0, 36) for i in range(27)]
@@ -53,6 +61,8 @@ def counting_numbers_second():
 
 
 """Функция считает количество языков которые знают школьники"""
+
+
 def scoolboys_knowledge_languages(schoolboys_1, schoolboys_2, schoolboys_3):
     result_languages = set(
         schoolboys_1[1::] + schoolboys_2[1::] + schoolboys_3[1::])
@@ -71,6 +81,8 @@ def scoolboys_knowledge_languages(schoolboys_1, schoolboys_2, schoolboys_3):
 
 
 """ Функция считает количество различных слов"""
+
+
 def different_words():
     new_string = 'mama g warit,sup ma      up. р.d  v d'
     result_string = ''
@@ -87,6 +99,8 @@ def different_words():
 
 
 """ Функция находит найбольший делитель"""
+
+
 def largest_divisor(a, b):
     while a != 0 and b != 0:
         if a >= b:

@@ -19,12 +19,16 @@ def long_word(new_string):
 
 
 """Функция удаляет последующие вхождения символов строки"""
+
+
 def repeat_symbols(new_string):
     from collections import OrderedDict
     new_string = new_string.replace(' ', '')
     new_string = "".join(OrderedDict.fromkeys(new_string))
     print(new_string)
 
+
+"""Функция преобразовывает строку"""
 
 
 def count_symbols(new_str):
@@ -41,6 +45,8 @@ def count_symbols(new_str):
 
 
 """Функция находит число Фибоначчи"""
+
+
 def count_fib(n):
     def Fib(n):
         if n <= 1:
@@ -56,6 +62,8 @@ def count_fib(n):
 
 
 """Функция проверяет является ли число палиндромом"""
+
+
 def palindrome(num):
     num_one = 0
     index = num
@@ -70,6 +78,8 @@ def palindrome(num):
 
 
 """Функция проверяет существует ли треугольник"""
+
+
 def triangle(a, b, c):
     p = 0
     s = 0
@@ -83,6 +93,8 @@ def triangle(a, b, c):
 
 
 """Функция переворачивает строку"""
+
+
 def number_list(num):
     result_1 = [int(x) for x in str(num)]
     result_1.sort(reverse=True)
@@ -91,6 +103,8 @@ def number_list(num):
 
 
 """Функция возвращает номер квартала"""
+
+
 def quarter_of(month):
     qw = 1
     if 1 <= month <= 3:
@@ -105,6 +119,8 @@ def quarter_of(month):
 
 
 """Функция возвращает квадрат цифр числа"""
+
+
 def square_digits(num):
     out = ''
     for im in str(num):
@@ -113,6 +129,8 @@ def square_digits(num):
 
 
 """ Функция считает возраст кота и собаки исходя из возраста человека"""
+
+
 def cat_dog_years(human_years):
     cat_years = 0
     dog_years = 0
@@ -143,6 +161,8 @@ def cat_dog_years(human_years):
 
 
 """ Функция возвращает корни квадратные рядом стоящих чисел"""
+
+
 def found_number(num):
     less_number = num - 1
     more_number = num + 1
