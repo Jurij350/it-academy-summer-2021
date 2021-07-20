@@ -40,7 +40,8 @@ try:
     for number, count in Counter(result_years).items():
         if count > 1:
             with open('years.txt', 'w') as years_txt:
-                years_txt.write(f"Год выхода {number} вышло {count} фильма(ов)\n")
+                years_txt.write(f"Год выхода {number} вышло "
+                                f"{count} фильма(ов)\n")
 
     # Через Counter записываем гистограмму рейтингов в файл
     # используем контекстный менеджер
