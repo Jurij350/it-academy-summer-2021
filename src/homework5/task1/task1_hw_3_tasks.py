@@ -1,6 +1,6 @@
 """Функция печатает строку символов согласно условия"""
 import task1_hw_4_tasks as t_4
-
+import task1_hw_2_tasks as t_2
 
 def fizzbuzz():
     for i in (range(1, 101)):
@@ -84,7 +84,17 @@ def transformation_num():
             new_list.append(new_list.pop(i))
     print(new_list)
 
+# Список который содержит в себе все функции для запуска функции runner()
 
 list_all_func = [transformation_num(), count_elements(), number_pair(),
                  tuple_pract(), list_pract(), fizzbuzz(), t_4.tuple_gen(),
-                 t_4.counting_numbers_first(), t_4.counting_numbers_second()]
+                 t_4.counting_numbers_first(), t_4.counting_numbers_second(),
+                 t_4.scoolboys_knowledge_languages(t_4.schoolboys_1,
+                 t_4.schoolboys_2, t_4.schoolboys_3),t_4.different_words(),
+                 t_4.largest_divisor(24, 101),t_2.count_price(5,6,4),
+                 t_2.long_word('mama warit sup'),
+                 t_2.repeat_symbols('mama warit sup'),t_2.count_symbols('ma wa sup'),
+                 t_2.count_fib(25),t_2.palindrome(18), t_2.triangle(3, 5, 7),
+                 t_2.number_list(15), t_2.quarter_of(4), t_2.square_digits(5),
+                 t_2.cat_dog_years(12), t_2.found_number(5), ]
+
