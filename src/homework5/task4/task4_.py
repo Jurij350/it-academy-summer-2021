@@ -21,7 +21,7 @@ try:
     result_years = []
     result_levels = []
     with open('ratings.txt') as rating_txt:
-        with open('top250_movies.txt','w') as top_250_movies_txt:
+        with open('top250_movies.txt', 'w') as top_250_movies_txt:
             for i, line in enumerate(rating_txt):
                 if 28 <= i <= 278:
                     # Преобразовываем строку в массив
