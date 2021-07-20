@@ -17,37 +17,37 @@ try:
     # в отдельные файлы согласно заданию программы
     # Данные два списка необходимы для
     # промежуточных значений
+
     result_years = []
     result_levels = []
     with open('ratings.txt') as rating_txt:
-        for i, line in enumerate(rating_txt):
-            if 28 <= i <= 278:
-                # Преобразовываем строку в массив
-                # символов и записываем последний
-                # символ в список
-                result_years.append(((line.split(' ')[-1])[1:5]))
-                # Берем срез строки и удаляем из него
-                # пробелы и записываем это все в список
-                result_levels.append((line[27:32]).strip())
-                # записываем в файл список всех названий фильмов
-                # через контекстный менеджер
-                with open('top250_movies.txt', 'w') as top_250_movies_txt:
+        with open('top250_movies.txt','w') as top_250_movies_txt:
+            for i, line in enumerate(rating_txt):
+                if 28 <= i <= 278:
+                    # Преобразовываем строку в массив
+                    # символов и записываем последний
+                    # символ в список
+                    result_years.append(((line.split(' ')[-1])[1:5]))
+                    # Берем срез строки и удаляем из него
+                    # пробелы и записываем это все в список
+                    result_levels.append((line[27:32]).strip())
+                    # записываем в файл список всех названий фильмов
                     top_250_movies_txt.write((line[32:-7]).strip() + '\n')
 
     # Через Counter записываем гистограмму готов в файл
     # используем контекстный менеджер
     result_years.sort(reverse=True)
-    for number, count in Counter(result_years).items():
-        if count > 1:
-            with open('years.txt', 'w') as years_txt:
+    with open('years.txt', 'w') as years_txt:
+        for number, count in Counter(result_years).items():
+            if count > 1:
                 years_txt.write(f"Год выхода {number} вышло "
                                 f"{count} фильма(ов)\n")
 
     # Через Counter записываем гистограмму рейтингов в файл
     # используем контекстный менеджер
-    for number, count in Counter(result_levels).items():
-        if count > 1:
-            with open('levels.txt', 'w') as levels_txt:
+    with open('levels.txt', 'w') as levels_txt:
+        for number, count in Counter(result_levels).items():
+            if count > 1:
                 levels_txt.write(f"Рейтинг {number} "
                                  f"составляет {count} фильм(ов)\n")
 
