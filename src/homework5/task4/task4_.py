@@ -11,11 +11,8 @@ years.txt – гистограмма годов.
 """
 
 from collections import Counter
+
 try:
-    # создаем файлы с атрибутом - для записи
-    top_250_movies_txt = open('top250_movies.txt', 'w')
-    levels_txt = open('levels.txt', 'w')
-    years_txt = open('years.txt', 'w')
     # В цикле записываем соответствующую часть строки
     # в отдельные файлы согласно заданию программы
     # Данные два списка необходимы для
@@ -33,19 +30,25 @@ try:
                 # пробелы и записываем это все в список
                 result_levels.append((line[27:32]).strip())
                 # записываем в файл список всех названий фильмов
-                top_250_movies_txt.write((line[32:-7]).strip() + '\n')
+                # через контекстный менеджер
+                with open('top250_movies.txt', 'w') as top_250_movies_txt:
+                    top_250_movies_txt.write((line[32:-7]).strip() + '\n')
 
     # Через Counter записываем гистограмму готов в файл
+    # используем контекстный менеджер
     result_years.sort(reverse=True)
     for number, count in Counter(result_years).items():
         if count > 1:
-            years_txt.write(f"Год выхода {number} вышло {count} фильма(ов)\n")
+            with open('years.txt', 'w') as years_txt:
+                years_txt.write(f"Год выхода {number} вышло {count} фильма(ов)\n")
 
     # Через Counter записываем гистограмму рейтингов в файл
+    # используем контекстный менеджер
     for number, count in Counter(result_levels).items():
         if count > 1:
-            levels_txt.write(f"Рейтинг {number} "
-                             f"составляет {count} фильм(ов)\n")
+            with open('levels.txt', 'w') as levels_txt:
+                levels_txt.write(f"Рейтинг {number} "
+                                 f"составляет {count} фильм(ов)\n")
 
 
 except IOError:
