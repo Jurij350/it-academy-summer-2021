@@ -27,9 +27,6 @@ class Ticket:
     """
 
     def __init__(self, where_from, to, comfort_level, day):
-        """Kонструктор в котором определяются пременные:
-        Откуда полет, куда полет, класс билета, день вылета."""
-
         self.where_from = where_from
         self.to = to
         self.comfort_level = comfort_level

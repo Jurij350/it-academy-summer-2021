@@ -19,7 +19,7 @@ class TooManyErrors(Error):
 
 
 class CounterDecRun:
-
+    """Класс в котором будут считаться количество вызовов функции."""
     def __init__(self):
         self.counter = 0
 
