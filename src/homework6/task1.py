@@ -18,13 +18,6 @@ import smtplib
 
 
 class Ticket:
-    """Класс Ticket определяет основные действия,
-    которые необходимо сделать для покупки билета в аэропорту Атрибуты:
-    Откуда where from
-    Куда to
-    Класс билета comfort level
-    День вылета day
-    """
 
     def __init__(self, where_from, to, comfort_level, day):
         self.where_from = where_from
