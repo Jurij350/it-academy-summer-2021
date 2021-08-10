@@ -1,4 +1,5 @@
 """
+
 Создайте  модель из жизни. Это может быть бронирование
 комнаты в отеле, покупка билета в транспортной компании,
 или простая РПГ. Создайте несколько объектов классов,
@@ -10,8 +11,8 @@
 
 """
 
-from email.mime.multipart import MIMEMultipart
 import datetime
+from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
 
@@ -30,6 +31,7 @@ class Ticket:
 
     def __init__(self, where_from, to, comfort_level, day):
         """
+
         конструктор в котором определяются пременные:
         Откуда полет, куда полет, класс билета, день вылета
          """
