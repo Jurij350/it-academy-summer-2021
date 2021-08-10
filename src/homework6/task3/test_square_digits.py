@@ -9,6 +9,7 @@ import ddt
 
 import unittest
 
+
 @ddt.ddt
 class SquareDigitsTestCase(unittest.TestCase):
 
@@ -20,7 +21,7 @@ class SquareDigitsTestCase(unittest.TestCase):
 
     @ddt.data(
         (0, 0),
-        (1,1),
+        (1, 1),
         (12, 14),
 
 

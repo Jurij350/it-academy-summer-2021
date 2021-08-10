@@ -24,7 +24,7 @@ class TestPairSquareCase(unittest.TestCase):
         (1, "4-0"),
         (-1, None),
         (0, None),
-        (15,"16-9")
+        (15, "16-9")
 
     )
     @ddt.unpack

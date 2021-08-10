@@ -15,5 +15,3 @@ def divisor(number):
             break
     index = index // 2
     return index
-
-
