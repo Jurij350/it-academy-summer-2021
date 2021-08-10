@@ -20,11 +20,12 @@ class TooManyErrors(Error):
 
 class CounterDecRun:
     """
-Данный класс отвечает за счетчик и считает
-количество вызовов функции - декоратора """
-
+    Данный класс отвечает за счетчик и считает
+    количество вызовов функции - декоратора
+    """
     def __init__(self):
         self.counter = 0
+
 
     def increment(self):
         self.counter = self.counter + 1
