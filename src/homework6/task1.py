@@ -18,6 +18,15 @@ import smtplib
 
 
 class Ticket:
+    """Класс который отображает процесс покупки билета
+
+    Атрибуты класса:
+    -откуда where from
+    -куда to
+    -уровень комфорта полета comfort level
+    -день полета day
+
+    """
 
     def __init__(self, where_from, to, comfort_level, day):
         self.where_from = where_from
@@ -27,7 +36,7 @@ class Ticket:
 
     @staticmethod
     def health_department():
-        #  Проверка температуры на входе в аэропорт
+        """Проверка температуры на входе в аэропорт"""
         temp = float(input('Enter, please, your temperature: '))
         if temp <= 36.7:
             answer = 'Please, come in!'
@@ -37,7 +46,7 @@ class Ticket:
 
     @staticmethod
     def price_count(comfort_level):
-        # Расчет стоимости билета исходя из класса комфорта
+        """Расчет стоимости билета исходя из класса комфорта"""
         if comfort_level == 1:
             price = 1500 * 3
         elif comfort_level == 2:
@@ -48,7 +57,7 @@ class Ticket:
 
     @staticmethod
     def security_service():
-        # Проверка службы безопасности на входе
+        """Проверка службы безопасности на входе"""
         new_question = str(input("Is there anything forbidden? y/n: "))
         answer = ''
         if new_question == 'y':
