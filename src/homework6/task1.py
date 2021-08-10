@@ -34,7 +34,7 @@ class Ticket:
 
         конструктор в котором определяются пременные:
         Откуда полет, куда полет, класс билета, день вылета
-         """
+        """
         self.where_from = where_from
         self.to = to
         self.comfort_level = comfort_level
