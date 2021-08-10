@@ -12,6 +12,7 @@
 """
 
 import datetime
+import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
@@ -59,15 +60,14 @@ class Ticket:
     def security_service():
         """Проверка службы безопасности на входе"""
         new_question = str(input("Is there anything forbidden? y/n: "))
-        answer = ''
+
         if new_question == 'y':
-            answer = "You can't come"
+            return "You can't come"
         if new_question == 'n':
-            answer = 'Please come in! '
-        return answer
+            return 'Please come in! '
 
     def order_ticket(self):
-        # Заказ билета в кассе
+        """Заказ билета в кассе"""
         now = datetime.datetime.now()
         price = Ticket.price_count(self.comfort_level)
         return "You're flying from {} to {}. \n Day {} Price {}. \n {} \n " \
@@ -76,8 +76,14 @@ class Ticket:
                     now.strftime('%H:%M:%S on %A, %B the %dth, %Y'))
 
     def buying_ticket(self, e_mail):
-        # Покупка билета с отправлением на электронную почту
-        # Дата и время осуществления операции
+        """Непосредственно покупка билета
+
+        параметр - e-mail
+        на выходе мы отправляем на указанный адрес электронной почты
+        атрибуты откуда полет, куда полет, день полета, а также дата
+        и время осуществления операции.
+
+        """
         now = datetime.datetime.now()
         adder_from = "yurystankevi4@yandex.ru"
         adder_to = e_mail
