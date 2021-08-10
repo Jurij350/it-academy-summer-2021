@@ -11,13 +11,14 @@
 """
 
 from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 import datetime
+from email.mime.text import MIMEText
 import smtplib
 
 
 class Ticket:
     """
+
     Класс Ticket определяет основные действия,
     которые необходимо сделать для покупки билета в аэропорту
     Атрибуты:
