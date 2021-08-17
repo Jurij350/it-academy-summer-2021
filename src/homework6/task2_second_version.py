@@ -48,12 +48,12 @@ con = sqlite3.connect('database.db')
 mysqlitedatabase.sql_table(con)
 cursor = con.cursor()
 
-
 cnt_second = SqliteCoutner()
 
 
 def dec_counter(func, number=5):
-    # Сам декоратор
+    """Декоратор функции"""
+
     def wrapper(*args, **kwargs):
         try:
             if number > cnt_second.counter:

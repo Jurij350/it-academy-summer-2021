@@ -20,6 +20,7 @@ class TooManyErrors(Error):
 
 class CounterDecRun:
     """Класс в котором будут считаться количество вызовов функции."""
+
     def __init__(self):
         self.counter = 0
 
@@ -32,8 +33,9 @@ class CounterDecRun:
 cnt = CounterDecRun()
 
 
-# Сам декоратор
 def dec_counter(func, number=5):
+    """Декоратор функции"""
+
     def wrapper(*args, **kwargs):
         try:
 
