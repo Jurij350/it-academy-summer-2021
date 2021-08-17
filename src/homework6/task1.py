@@ -35,16 +35,6 @@ class Ticket:
         self.day = day
 
     @staticmethod
-    def health_department():
-        """Проверка температуры на входе в аэропорт"""
-        temp = float(input('Enter, please, your temperature: '))
-        if temp <= 36.7:
-            answer = 'Please, come in!'
-        else:
-            answer = 'You must pass the test Covid_19'
-        return answer
-
-    @staticmethod
     def price_count(comfort_level):
         """Расчет стоимости билета исходя из класса комфорта"""
         if comfort_level == 1:
@@ -54,16 +44,6 @@ class Ticket:
         elif comfort_level == 1:
             price = 1500
         return price
-
-    @staticmethod
-    def security_service():
-        """Проверка службы безопасности на входе"""
-        new_question = str(input("Is there anything forbidden? y/n: "))
-
-        if new_question == 'y':
-            return "You can't come"
-        if new_question == 'n':
-            return 'Please come in! '
 
     def order_ticket(self):
         """Заказ билета в кассе"""
@@ -110,8 +90,7 @@ if __name__ == '__main__':
     # Этот if для того если я захочу импортировать класс
     # как модуль чтобы нижеописанные операции не выполнялись
     ticket = Ticket('Minsk', 'Warshaw', 1, '26.09.21')
-    print(ticket.health_department())
-    print(ticket.security_service())
+
     print(ticket.order_ticket())
 
     ticket.buying_ticket('jurasach@mail.ru')

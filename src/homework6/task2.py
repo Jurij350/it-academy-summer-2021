@@ -36,9 +36,12 @@ cnt = CounterDecRun()
 def dec_counter(func, number=5):
     def wrapper(*args, **kwargs):
         try:
-            cnt.increment()
-            if number < cnt.counter:
+
+            if number > cnt.counter:
+                cnt.increment()
+            else:
                 raise TooManyErrors
+
             result = func(*args, **kwargs)
             return result
         except TooManyErrors:

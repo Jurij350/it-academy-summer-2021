@@ -22,9 +22,7 @@ def smallest_number(a, b):
 
 def check_fraction(n, d):
     # Проверка того что дробь сокращена
-    if n < d and smallest_number(n, d) == 1:
-        return True
-    return False
+    return n < d and smallest_number(n, d) == 1
 
 
 def search_fraction_members(max_del):
@@ -49,6 +47,6 @@ if fraction[0] == 2 and fraction[1] == 5:
     maximum_del = 1000000
     fraction = search_fraction_members(maximum_del)
 
-print("Для d <= {}, {}/{} дробь, которая"
+print("Для d <= {}, {} - является числителем дроби, которая"
       " расположена непосредственно слева от 3/7."
-      .format(maximum_del, int(fraction[0]), fraction[1]))
+      .format(maximum_del, int(fraction[0])))
