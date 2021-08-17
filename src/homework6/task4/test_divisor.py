@@ -13,12 +13,6 @@ import task4
 @ddt.ddt
 class TestDivisorCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (28, 4),
         (0, 0),

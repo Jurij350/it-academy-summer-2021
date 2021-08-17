@@ -12,12 +12,6 @@ import func_homeworks
 @ddt.ddt
 class TestNumberPairCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         ("1111", 6),
         ("111", 3),

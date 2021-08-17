@@ -10,12 +10,6 @@ import func_homeworks
 @ddt.ddt
 class TestLargestDivisorCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (1, 1, 1),
         (2, 0, 2),

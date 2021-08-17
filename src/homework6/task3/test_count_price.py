@@ -12,12 +12,6 @@ import func_homeworks
 @ddt.ddt
 class TestCountPriceCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (1, 1, 1, '\rTotal amount: 1 rubles 1 kopeck. '),
         (1, 1, 0, '\rTotal amount: 0 rubles 0 kopeck. '),

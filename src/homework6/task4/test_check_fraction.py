@@ -12,12 +12,6 @@ import task4_eiler
 @ddt.ddt
 class TestCheckFraction(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (1, 2, True),
         (2, 4, False),

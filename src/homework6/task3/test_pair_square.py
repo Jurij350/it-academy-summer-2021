@@ -13,12 +13,6 @@ import func_homeworks
 @ddt.ddt
 class TestPairSquareCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (100, "121-81"),
         (1, "4-0"),

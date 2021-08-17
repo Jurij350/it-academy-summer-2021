@@ -14,12 +14,6 @@ import func_homeworks
 @ddt.ddt
 class TestCatDogYearsTestCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (0, " Incorrect data! "),
         (1, [1, 15, 15]),

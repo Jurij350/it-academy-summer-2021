@@ -13,12 +13,6 @@ import func_homeworks
 @ddt.ddt
 class TestQuarterCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (1, 1),
         (5, 2),

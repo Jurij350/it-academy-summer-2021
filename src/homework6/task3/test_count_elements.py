@@ -13,12 +13,6 @@ import func_homeworks
 @ddt.ddt
 class TestCountElementsCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         ([1, 2, 3, 6, 4, 7, 3, 9, 3, 4], [1, 2, 6, 7, 9]),
         ([], []),

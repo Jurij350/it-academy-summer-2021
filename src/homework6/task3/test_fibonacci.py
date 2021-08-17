@@ -10,12 +10,6 @@ import func_homeworks
 @ddt.ddt
 class FibonnacciCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (0, 0),
         (1, 0),

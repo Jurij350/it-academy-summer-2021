@@ -13,12 +13,6 @@ import unittest
 @ddt.ddt
 class SquareDigitsTestCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (0, 0),
         (1, 1),

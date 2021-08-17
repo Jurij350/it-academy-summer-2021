@@ -12,12 +12,6 @@ import task4_eiler
 @ddt.ddt
 class TestSmallestNumber(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (2, 6, 2),
         (0, 1, 1),

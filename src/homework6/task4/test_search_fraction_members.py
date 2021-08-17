@@ -12,12 +12,6 @@ import task4_eiler
 @ddt.ddt
 class TestSearchFractionMembers(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         (-1, [1, -1, -1]),
         (2, [1, 2, 0.5]),

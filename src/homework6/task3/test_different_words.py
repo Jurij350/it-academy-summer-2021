@@ -12,12 +12,6 @@ import func_homeworks
 @ddt.ddt
 class TestDifferentWordsCase(unittest.TestCase):
 
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
     @ddt.data(
         ('mama warit sup sup', {'mama', 'warit', 'sup'}),
         ("", {""}),
